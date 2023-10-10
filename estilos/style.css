@@ -16,6 +16,8 @@ header{
     align-items: center;
     padding: 24px 64px;
     transition: .5s;
+    position: relative;
+    max-height: 200px;
 }
 
 header:hover{
@@ -23,6 +25,54 @@ header:hover{
     color: white;
     transition: .5s;
 }
+
+.titulo{
+    display: flex;
+}
+
+.titulo img{
+    animation: girando infinite linear 10s;
+}
+
+/* .centro{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: solid black 4px;
+    background-color: rgb(238, 238, 238);
+    position: relative;
+    top: -140px;
+    right: -50px;
+}
+
+.vermelho{
+    border: solid black 4px;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    shape-outside: circle(0% at 50%);
+    clip-path: circle(50% at 0%);
+    background: red;
+    transform: rotate(90deg);
+    top: 120px;
+    position: relative;
+    animation: girando 2s infinite linear;    
+}
+
+.branco{
+    border: solid black 4px;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    shape-outside: circle(0% at 50%);
+    clip-path: circle(50% at 0%);
+    background: white;
+    transform: rotate(270deg);
+    position: relative;
+    top: -100px;
+    animation: girando 2s infinite linear;
+}
+ */
 
 #filtro{
     border: none;
@@ -66,13 +116,10 @@ header:hover{
     transition-delay: .5s;
 }
 
+
 .card-imagem{
     display: flex;
     margin: 24px 12px 12px 12px;
-}
-
-.card-imagem:hover .card-texto h2{
-    color: white;
 }
 
 .card-imagem .front{
@@ -83,13 +130,13 @@ header:hover{
     display: block;
 }
 
-.card-imagem:hover .front{
+.card-container:hover .front{
     display: block;
     color: white;
 
 }
 
-.card-imagem:hover .back{
+.card-container:hover .back{
     display: none;
     color: white;
 
@@ -162,6 +209,16 @@ header:hover{
 
 .dragon{
     background-color: goldenrod;
+}
+
+@keyframes girando{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width: 980px) {
